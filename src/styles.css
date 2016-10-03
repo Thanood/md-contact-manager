@@ -1,7 +1,13 @@
-body { padding-top: 70px; }
+body {
+  background-color: #f5f5f5;
+}
 
 section {
   margin: 0 20px;
+}
+
+nav .nav-wrapper {
+  padding: 0 15px;
 }
 
 a:focus {
@@ -27,19 +33,29 @@ a:focus {
 }
 
 .button-bar {
-  right: 0;
+  /*right: 0;
   left: 0;
-  bottom: 0;
+  bottom: 0;*/
   border-top: 1px solid #ddd;
   background: white;
+  display: flex;
+  padding-top: 15px;
 }
 
-.button-bar > button {
+.flex-spacer {
+  flex-grow: 1;
+}
+
+main {
+  padding: 25px 0;
+}
+
+/*.button-bar > button {
   float: right;
   margin: 20px;
-}
+}*/
 
-li.list-group-item {
+/*li.list-group-item {
   list-style: none;
 }
 
@@ -48,5 +64,10 @@ li.list-group-item > a {
 }
 
 li.list-group-item.active > a {
+  color: white;
+}
+*/
+
+.collection .collection-item.active a {
   color: white;
 }

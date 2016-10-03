@@ -21,5 +21,6 @@ export function configure(aurelia) {
     aurelia.use.plugin('aurelia-testing');
   }
 
+  aurelia.use.plugin('aurelia-materialize-bridge', b => b.useAll());
   aurelia.start().then(() => aurelia.setRoot());
 }
