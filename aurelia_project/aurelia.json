@@ -1,5 +1,5 @@
 {
-  "name": "md-contact-manager",
+  "name": "md-contact-manager-2",
   "type": "project:application",
   "platform": {
     "id": "web",
@@ -16,19 +16,19 @@
         "transform-es2015-modules-amd"
       ]
     },
-    "source": "src\\**\\*.js"
+    "source": "src/**/*.js"
   },
   "markupProcessor": {
     "id": "none",
     "displayName": "None",
     "fileExtension": ".html",
-    "source": "src\\**\\*.html"
+    "source": "src/**/*.html"
   },
   "cssProcessor": {
     "id": "none",
     "displayName": "None",
     "fileExtension": ".css",
-    "source": "src\\**\\*.css"
+    "source": "src/**/*.css"
   },
   "editor": {
     "id": "vscode",
@@ -37,15 +37,15 @@
   "unitTestRunner": {
     "id": "karma",
     "displayName": "Karma",
-    "source": "test\\unit\\**\\*.js"
+    "source": "test/unit/**/*.js"
   },
   "paths": {
     "root": "src",
-    "resources": "src\\resources",
-    "elements": "src\\resources\\elements",
-    "attributes": "src\\resources\\attributes",
-    "valueConverters": "src\\resources\\value-converters",
-    "bindingBehaviors": "src\\resources\\binding-behaviors"
+    "resources": "src/resources",
+    "elements": "src/resources/elements",
+    "attributes": "src/resources/attributes",
+    "valueConverters": "src/resources/value-converters",
+    "bindingBehaviors": "src/resources/binding-behaviors"
   },
   "testFramework": {
     "id": "jasmine",
@@ -85,6 +85,31 @@
         "source": [
           "[**/*.js]",
           "**/*.{css,html}"
+        ]
+      },
+      {
+        "name": "materialize-bundle.js",
+        "dependencies": [
+          "jquery",
+          {
+            "name": "materialize-css",
+            "path": "../node_modules/materialize-css/dist",
+            "main": "js/materialize.amd",
+            "deps": [
+              "jquery"
+            ]
+          },
+          {
+            "name": "aurelia-materialize-bridge",
+            "path": "../node_modules/aurelia-materialize-bridge/dist/amd",
+            "main": "index",
+            "deps": [
+              "jquery"
+            ],
+            "resources": [
+              "**/*.{css,html}"
+            ]
+          }
         ]
       },
       {
@@ -134,68 +159,6 @@
             "path": "../node_modules/aurelia-testing/dist/amd",
             "main": "aurelia-testing",
             "env": "dev"
-          }
-        ]
-      },
-      {
-        "name": "materialize-bundle.js",
-        "dependencies": [
-          "jquery",
-          {
-            "name": "materialize-css",
-            "path": "../node_modules/materialize-css/dist",
-            "main": "js/materialize.amd",
-            "deps": [
-              "jquery"
-            ],
-            "resources": [
-              "css/materialize.css"
-            ],
-            "exports": "Materialize"
-          },
-          {
-            "name": "aurelia-materialize-bridge",
-            "path": "../node_modules/aurelia-materialize-bridge/dist/amd",
-            "main": "index",
-            "deps": [
-              "jquery"
-            ],
-            "resources": [
-              "breadcrumbs/breadcrumbs.css",
-              "breadcrumbs/breadcrumbs.html",
-              "card/card.css",
-              "card/card.html",
-              "carousel/carousel-item.html",
-              "carousel/carousel.css",
-              "carousel/carousel.html",
-              "checkbox/checkbox.html",
-              "chip/chip.html",
-              "collection/collection-header.css",
-              "collection/collection-header.html",
-              "collection/collection-item.css",
-              "collection/collection-item.html",
-              "collection/collection.html",
-              "collection/md-collection-selector.css",
-              "collection/md-collection-selector.html",
-              "colors/md-colors.html",
-              "dropdown/dropdown-element.html",
-              "fab/fab.html",
-              "file/file.html",
-              "input/input.css",
-              "input/input.html",
-              "navbar/navbar.css",
-              "navbar/navbar.html",
-              "pagination/pagination.html",
-              "progress/progress.html",
-              "radio/radio.html",
-              "range/range.html",
-              "sidenav/sidenav.css",
-              "sidenav/sidenav.html",
-              "slider/slider.css",
-              "switch/switch.css",
-              "switch/switch.html",
-              "well/md-well.html"
-            ]
           }
         ]
       }
